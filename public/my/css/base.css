@@ -1,3 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
 header.mui-bar-nav {
   background-color: #006699;
 }
@@ -16,25 +27,4 @@ nav.mui-bar-tab a.mui-tab-item {
 }
 nav.mui-bar-tab a.mui-tab-item.mui-active {
   color: darkorange;
-}
-.mui-content .mui-banner {
-  position: relative;
-}
-.mui-content .mui-banner img {
-  width: 100%;
-  display: block;
-}
-.mui-content .mui-banner .mui-slider-indicator {
-  margin-bottom: 5px;
-}
-.mui-content .mui-navlink {
-  padding: 10px;
-}
-.mui-content .mui-navlink a {
-  float: left;
-  width: 33.33%;
-}
-.mui-content .mui-navlink a img {
-  width: 100%;
-  display: block;
 }
