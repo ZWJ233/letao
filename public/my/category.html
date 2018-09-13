@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="./css/category.css"/>
     <script src="./assets/zepto/zepto.min.js"></script>
     <script src="./assets/mui/js/mui.min.js"></script>
+    <script src="./assets/artTemplate/template-web.js"></script>
     <script src="./js/common.js"></script>
+    <script src="./js/category.js"></script>
     <title></title>
 </head>
 <body>
@@ -40,17 +42,36 @@
     <div class="leftBox">
         <div class="mui-scroll-wrapper">
             <div class="mui-scroll">
-
+                <ul>
+                </ul>
             </div>
         </div>
     </div>
     <div class="rightBox">
         <div class="mui-scroll-wrapper">
-            <div class="mui-scroll">
+            <div class="mui-scroll" id="mui-scroll">
 
             </div>
         </div>
     </div>
 </div>
 </body>
+<script id="first-category" type="text/html">
+    {{each data as value}}
+    <li {{if(value.id==1)}}
+        class="active"
+        {{/if}}  data-id="{{value.id}}">{{value.categoryName}}</li>
+    {{/each}}
+</script>
+<script id="second-category" type="text/html">
+     {{if(data.length==0)}}
+         <div class="warp"><span>暂无数据</span></div>
+     {{/if}}
+    {{each data}}
+    <a href="javascript:;">
+        <img src="{{$value.brandLogo}}"/>
+        <span>{{$value.brandName}}</span>
+    </a>
+    {{/each}}
+</script>
 </html>
