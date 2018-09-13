@@ -15,7 +15,8 @@ $(function(){
         }else{
             localStorage.setItem('datas',JSON.stringify(data));
         }
-    })
+        window.location.href="http://localhost:3000/my/search-list.html?data=" + value;
+    });
     getSearch();
     $('.mui-content a').on('click',function(){
         localStorage.removeItem('datas');
