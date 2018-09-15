@@ -37,19 +37,22 @@
         <span class="mui-tab-label">会员中心</span>
     </a>
 </nav>
-<div class="mui-content">
-    <div class="mui-scroll-wrapper">
-        <div class="mui-scroll">
-            <p><span>价格</span><span class="mui-icon mui-icon-arrowdown"></span></p>
-            <p><span>销量</span><span class="mui-icon mui-icon-arrowdown"></span></p>
-            <div class="mui-product">
-                <ul>
+<div id="refreshContainer">
+    <div class="mui-content">
+        <div class="scroll-wrapper">
+            <div class="scroll">
+                <p><span>价格</span><span class="mui-icon mui-icon-arrowdown" id="price"></span></p>
+                <p><span>销量</span><span class="mui-icon mui-icon-arrowdown" id="number"></span></p>
+                <div class="mui-product">
+                    <ul>
 
-                </ul>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 </body>
 <script id="product-list" type="text/html">
     {{each data}}

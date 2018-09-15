@@ -15,17 +15,11 @@ params.price = priceSort;
 params.num = numSort;
 
 $(function(){
-
 	var key = getParamsByUrl(location.href,'key');
-
 	if(!key){
-
 		return;
-
 	}
-
 	params.proName = key;
-
 	mui.init({
 	  pullRefresh : {
 	    container:document.querySelector('#refresh'),//待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
@@ -40,9 +34,9 @@ $(function(){
 	});
 
 	$('#priceSort').on('tap',function(){
-
+		console.log(params.price);
 		params.price = (params.price == 1 ? 2 : 1);
-
+		console.log(params.price);
 		products.data.length = 0;
 
 		isLast = false;
@@ -76,77 +70,41 @@ $(function(){
 
 
 function findProduct(){
-
 	if(!This){
 		This = this;
 	}
-	
-	console.log(This)
-
 	if(!isLast && !loading){
-
 		$.ajax({
 			type:'get',
 			url:'/product/queryProduct',
 			data:params,
 			beforeSend:function(){
-
 				loading = true;
-
 			},
 			success:function(result){
-
 				totalPage = Math.ceil(result.count/pageSize);
-
 				loading = false;
-
 				for(var attr in result){
-
 					if(attr != 'data'){
-
 						products[attr] = result[attr];
-
 					}else{
-
 						if(!products.data){
-
 							products.data = result[attr];
-
 						}else{
-
 							for(var i=0;i<result[attr].length;i++){
-
 								products.data.push(result[attr][i]);
-
 							}
-
 						}
-
 					}
-
 				}
-
-				console.log(result)
-
 				$('#productBox').html(template('productTpl',{result:products}));
-
-
-				// console.log(result);
-
 				params.page++;
-
 				if(params.page > totalPage){
-
 					isLast = true;
-
 				}else{
-
 					isLast = false;
-
 				}
-				
 				This.endPullupToRefresh(isLast);
-			
 			}
 		})
 
