@@ -25,6 +25,8 @@ $(function(){
 });
 function getSearch(){
     var searchData = JSON.parse(localStorage.getItem('datas'));
+    console.log(searchData);
     var html = template('searchList',{data:searchData});
+    console.log({data:searchData});
     $('.searchList').html(html);
 }

@@ -5,14 +5,10 @@ header.mui-bar-nav a {
   padding: 0;
 }
 .mui-content {
-  width: 100%;
-  position: absolute;
-  overflow: hidden;
-  top: 44px;
-  bottom: 50px;
+  padding-top: 10px;
   background-color: #fff;
 }
-.mui-content .mui-scroll p {
+.mui-content .scroll p {
   text-align: center;
   display: block;
   height: 36px;
@@ -21,22 +17,22 @@ header.mui-bar-nav a {
   background-color: #efeff4;
   margin: 10px 10px 0;
 }
-.mui-content .mui-scroll p span:last-of-type {
+.mui-content .scroll p span:last-of-type {
   font-size: 12px;
   font-weight: bold;
   padding-left: 3px;
 }
-.mui-content .mui-scroll .mui-product {
+.mui-content .scroll .mui-product {
   margin-top: 20px;
   padding: 0 10px;
 }
-.mui-content .mui-scroll .mui-product > img {
+.mui-content .scroll .mui-product > img {
   width: 100%;
 }
-.mui-content .mui-scroll .mui-product > ul {
+.mui-content .scroll .mui-product > ul {
   margin: 5px 0;
 }
-.mui-content .mui-scroll .mui-product > ul li {
+.mui-content .scroll .mui-product > ul li {
   float: left;
   width: 48%;
   margin: 1%;
@@ -44,40 +40,40 @@ header.mui-bar-nav a {
   box-shadow: -1px -1px 10px #ccc;
   text-align: center;
 }
-.mui-content .mui-scroll .mui-product > ul li > a:first-of-type {
+.mui-content .scroll .mui-product > ul li > a:first-of-type {
   color: #8f8f94;
   font-size: 14px;
 }
-.mui-content .mui-scroll .mui-product > ul li > a:first-of-type img {
+.mui-content .scroll .mui-product > ul li > a:first-of-type img {
   width: 100%;
   display: block;
   padding: 0 5px;
   box-sizing: border-box;
 }
-.mui-content .mui-scroll .mui-product > ul li > a:first-of-type > span {
+.mui-content .scroll .mui-product > ul li > a:first-of-type > span {
   display: inline-block;
   height: 44px;
   line-height: 18px;
   padding: 7px;
   overflow: hidden;
 }
-.mui-content .mui-scroll .mui-product > ul li p {
+.mui-content .scroll .mui-product > ul li p {
   margin-bottom: 5px;
   margin-top: -5px;
 }
-.mui-content .mui-scroll .mui-product > ul li p > span {
+.mui-content .scroll .mui-product > ul li p > span {
   font-size: 12px;
 }
-.mui-content .mui-scroll .mui-product > ul li p > span:first-of-type {
+.mui-content .scroll .mui-product > ul li p > span:first-of-type {
   color: #f30;
   padding-right: 4px;
 }
-.mui-content .mui-scroll .mui-product > ul li p > span:last-of-type {
+.mui-content .scroll .mui-product > ul li p > span:last-of-type {
   color: #cccccc;
   padding-left: 4px;
   text-decoration: line-through;
 }
-.mui-content .mui-scroll .mui-product > ul li > a:last-of-type {
+.mui-content .scroll .mui-product > ul li > a:last-of-type {
   color: #fff;
   background-color: #006699;
   display: inline-block;
@@ -87,6 +83,13 @@ header.mui-bar-nav a {
   padding: 0 10px;
   margin-bottom: 10px;
 }
-.mui-content .mui-scroll .mui-product p {
+.mui-content .scroll .mui-product p {
   background-color: #fff;
+}
+#refreshContainer {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 44px;
+  bottom: 50px;
 }
