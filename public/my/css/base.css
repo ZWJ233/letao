@@ -28,3 +28,6 @@ nav.mui-bar-tab a.mui-tab-item {
 nav.mui-bar-tab a.mui-tab-item.mui-active {
   color: darkorange;
 }
+.mui-action-back.mui-icon.mui-icon-left-nav.mui-pull-left {
+  float: left;
+}

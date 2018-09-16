@@ -85,7 +85,7 @@ function getData(){
                     }
                 }
                 html += template('product-list',{data:result.data});
-                console.log(html);
+                console.log({data:result.data});
                 $('.mui-product>ul').html(html);
                 page ++;
                 loading = false;
