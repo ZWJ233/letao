@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.btn-group ul{
+  list-style: none;
+  overflow: hidden;
+  float: left;
+  height: 34px;
+  text-align: center;
+  margin: 0 10px;
+  color: #999999;
+  cursor: pointer;
+  li{
+    width: 40px;
+    float: left;
+    line-height: 32px;
+    border: 1px solid #cccccc;
+    border-left: none;
+    &:first-of-type{
+      border-left: 1px solid #cccccc;
+    }
+    &:hover{
+      background-color: skyblue;
+      color: #ffffff;
+    }
+  }
+}
+.btn-group.page{
+  width: 100%;
+}
+.active{
+  background-color: skyblue;
+  color: #ffffff;
+}
