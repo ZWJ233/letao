@@ -11,6 +11,12 @@
 	<script src="./assets/artTemplate/template-web.js"></script>
 	<script src="js/common.js"></script>
 	<script src="js/user.js"></script>
+	<style>
+		.btn-danger.green{
+			background-color: #5cb85c;
+			border: 1px solid transparent;
+		}
+	</style>
 </head>
 <body>
 	<div class="system">
@@ -99,13 +105,15 @@
 				{{/if}}
 			</td>
 			<td>
-				<button type="button" class="btn btn-danger">
-					{{if($value.isDelete)}}
+				{{if($value.isDelete)}}
+				<button id="isTrue" type="button" class="btn btn-danger" data-id="{{$value.id}}">
 					禁用
-					{{else}}
-					启用
-					{{/if}}
 				</button>
+				{{else}}
+				<button id="isTrue" type="button" class="btn btn-danger green" data-id="{{$value.id}}">
+					启用
+				</button>
+				{{/if}}
 			</td>
 		</tr>
 		{{/each}}
